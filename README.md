@@ -1,7 +1,8 @@
 # AI Calling Agent
 
-Automates outbound calls, qualifies leads, and books demos. Built for our sales team at 10000 Coders.
+Automates outbound calls, qualifies leads, and books demos for 10000 Coders.
 
-Stack: Python, Twilio, OpenAI, FastAPI
+Live demo: https://ai-agent.10000coders.in/
 
+Stack: Python, Twilio, Whisper, FastAPI
 Status: in production
