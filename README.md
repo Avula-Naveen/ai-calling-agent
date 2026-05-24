@@ -1,5 +1,3 @@
-ok and also tell me steps how to add.
-
 # AI Calling Agent
 
 Production outbound voice platform for **campaign-based lead qualification**. Built for the [10000 Coders](https://10000coders.in) sales team — automated dialing, bilingual voice conversations, and structured outcomes in one operator console.
@@ -37,7 +35,7 @@ flowchart LR
 
   subgraph Voice["Voice worker (LiveKit Agent)"]
     SIP[SIP outbound call]
-    LLM[ realtime voice]
+    LLM[AI realtime voice]
     Analysis[Post-call analysis]
   end
 
@@ -47,13 +45,6 @@ flowchart LR
   API --> DB
   Dialer -->|dispatch job| Voice
   SIP --> Gemini
-  STT-LLM-TTS --> Analysis
+  AI --> Analysis
   Analysis -->|webhook: outcome + transcript| API
   API --> Logs
-
-1. Operator configures the campaign and uploads contacts.
-2.API acquires a dialer lease and dispatches a LiveKit worker per contact.
-3.Worker places the PSTN call, runs the AI session, then PATCHes structured results to the API.
-4.UI polls for queue progress, outcomes, and transcripts.
-
-:: This is my actual behaviour of a calling agent 
