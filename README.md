@@ -44,7 +44,7 @@ flowchart LR
   Prompt --> API
   API --> DB
   Dialer -->|dispatch job| Voice
-  SIP --> Gemini
+  SIP --> LLM
   AI --> Analysis
   Analysis -->|webhook: outcome + transcript| API
   API --> Logs
